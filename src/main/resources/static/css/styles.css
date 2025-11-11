@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+*{
+    font-family: "Lora";
+}
+nav>a, h1, h2, h3{
+    font-family: "GFS Didot";
+    text-decoration: none;
+    color: #263238;
+    font-size: 20px;
+}
+.nav {
+    width: 50px;
+    background-color: #F5F7FA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-left:20px;
+    padding-bottom: 20px;
+    position: fixed;
+    gap: 15px;
+}
+.nav a:hover {
+    color: #8E24AA;
+    background-color: #F3E5F5;
+    border-radius: 6px;
+    padding: 5px;
+}
+.content {
+    margin-left: 70px;
+    padding-top: 15px;
+    flex-grow: 1;
+    color: #263238;
+}
+input{
+    margin-top: 100px;
+}
+.link{
+    text-decoration: none;
+    color: #263238;
+    font-style: italic;
+}
+.red{
+    color: red;
+}

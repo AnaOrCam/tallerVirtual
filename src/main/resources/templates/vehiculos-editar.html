@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar vehiculo</title>
+  <div th:replace="fragments/header :: css"></div>
+</head>
+<body>
+<div th:replace="fragments/header :: menu"></div>
+<div class="content">
+  <h2>Editar vehiculo</h2>
+  <hr>
+  <br>
+  <form th:action="@{/vehiculos/guardarcambios}" th:object="${vehiculo}" method="post">
+    <input type="hidden" th:field="*{id}" />
+    <label class="form-label">Matricula:</label>
+    <input class="form-control" type="text" th:field="*{matricula}" required/><br/>
+    <label class="form-label">Marca:</label>
+    <input class="form-control" type="text" th:field="*{marca}" required/><br/>
+    <label class="form-label">Modelo:</label>
+    <input class="form-control" type="text" th:field="*{modelo}" required/><br/>
+    <button class="btn btn-primary" type="submit">Guardar</button>
+  </form>
+</div>
+</body>
+</html>

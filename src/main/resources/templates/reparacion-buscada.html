@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reparacion</title>
+  <div th:replace="fragments/header :: css"></div>
+</head>
+<body>
+<div th:replace="fragments/header :: menu"></div>
+<div class="content">
+  <h1>Datos de la reparación:</h1>
+  <hr>
+  <br>
+  <h2 th:text="'ID:'+${reparacion.id+' - ('+reparacion.fechaEntrada}+')'"></h2>
+
+  <p><strong>Vehiculo:</strong> <span th:text="${reparacion.vehiculo.matricula}"></span></p>
+  <strong>Datos:</strong>
+  <ul>
+    <li th:text="'Descripcion: '+${reparacion.descripcion}"></li>
+    <li th:text="'Fecha de entrada: '+${reparacion.fechaEntrada}"></li>
+    <li th:text="'Fecha de salida: '+${reparacion.fechaSalida}"></li>
+  </ul>
+
+  <p><a th:href="@{/reparaciones/editar/{id}(id=${reparacion.id})}">Editar reparacion</a></p>
+  <p><a th:href="@{/reparaciones/borrar/{id}(id=${reparacion.id})}">Borrar reparacion</a></p>
+</div>
+</body>
+</html>

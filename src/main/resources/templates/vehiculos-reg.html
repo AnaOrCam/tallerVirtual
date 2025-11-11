@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nuevo vehiculo</title>
+  <div th:replace="fragments/header :: css"></div>
+</head>
+<body>
+<div th:replace="fragments/header :: menu"></div>
+<div class="content">
+  <h2>Registrar nuevo vehiculo</h2>
+  <hr>
+  <br>
+  <form th:action="@{/vehiculos/guardar}" th:object="${vehiculo}" method="post">
+    <label class="form-label">Cliente:</label>
+    <select th:field="*{cliente.id}" required>
+      <option value="">-- Selecciona un cliente --</option>
+      <option th:each="c : ${clientes}" th:value="${c.id}" th:text="${c.nombre}"></option>
+    </select><br/>
+    <label class="form-label">ID:</label>
+    <input class="form-control" type="number" th:field="*{id}" required/><br/>
+    <label class="form-label">Matricula:</label>
+    <input class="form-control" type="text" th:field="*{matricula}" required/><br/>
+    <label class="form-label">Marca:</label>
+    <input class="form-control" type="text" th:field="*{marca}" required/><br/>
+    <label class="form-label">Modelo:</label>
+    <input class="form-control" type="text" th:field="*{modelo}" required/><br/>
+    <button class="btn btn-primary" type="submit">Guardar</button>
+  </form>
+</div>
+</body>
+</html>
