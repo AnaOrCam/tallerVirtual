@@ -13,8 +13,6 @@
   <br>
 
   <form th:action="@{/clientes/guardar}" th:object="${cliente}" method="post">
-    <label class="form-label">ID:</label>
-    <input class="form-control" type="number" th:field="*{id}" required/><br/>
     <label class="form-label">Nombre:</label>
     <input class="form-control" type="text" th:field="*{nombre}" required/><br/>
     <label class="form-label">Telefono:</label>

@@ -8,6 +8,7 @@ public class Cliente {
     private String email;
 
     public Cliente(){
+        this.id=(long) (Math.random()*(1000+1));
     };
 
     public Long getId() {

@@ -17,8 +17,6 @@
             <option value="">-- Selecciona un vehiculo --</option>
             <option th:each="v : ${vehiculos}" th:value="${v.id}" th:text="${v.matricula}"></option>
         </select><br/>
-        <label class="form-label">ID:</label>
-        <input class="form-control" type="number" th:field="*{id}" required/><br/>
         <label class="form-label">Descripcion:</label>
         <input class="form-control" type="text" th:field="*{descripcion}" required/><br/>
         <label class="form-label">Fecha entrada:</label>

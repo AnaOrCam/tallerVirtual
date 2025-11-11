@@ -11,6 +11,7 @@ public class Reparacion {
     private Vehiculo vehiculo;
 
     public Reparacion(){
+        this.id=(long) (Math.random()*(1000+1));
     };
 
     public Long getId() {

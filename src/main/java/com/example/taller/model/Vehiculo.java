@@ -9,6 +9,7 @@ public class Vehiculo {
     private Cliente cliente;
 
     public Vehiculo(){
+        this.id=(long) (Math.random()*(1000+1));
     };
 
     public Long getId() {

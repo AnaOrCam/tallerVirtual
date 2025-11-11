@@ -17,8 +17,6 @@
       <option value="">-- Selecciona un cliente --</option>
       <option th:each="c : ${clientes}" th:value="${c.id}" th:text="${c.nombre}"></option>
     </select><br/>
-    <label class="form-label">ID:</label>
-    <input class="form-control" type="number" th:field="*{id}" required/><br/>
     <label class="form-label">Matricula:</label>
     <input class="form-control" type="text" th:field="*{matricula}" required/><br/>
     <label class="form-label">Marca:</label>
