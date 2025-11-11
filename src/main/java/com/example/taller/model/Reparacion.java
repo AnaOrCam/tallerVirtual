@@ -2,8 +2,6 @@ package com.example.taller.model;
 
 import java.time.LocalDate;
 
-import static com.example.taller.utilidades.funcionesAuxiliares.conversorFechas;
-
 public class Reparacion {
 
     private Long id;

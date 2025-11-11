@@ -1,7 +1,6 @@
 package com.example.taller.service;
 
 import com.example.taller.model.Reparacion;
-import com.example.taller.model.Vehiculo;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
